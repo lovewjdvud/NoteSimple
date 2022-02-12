@@ -13,14 +13,36 @@ import JJFloatingActionButton
 
 class ViewController: UIViewController {
 
+    
+    
+    
+    let TableViewModel = TableViewMdoel()       // 테이블뷰 viewmpdel
+    var disposbag = DisposeBag()
+    
+    let CellId = "TableViewCell" //TableViewCell
+    
+    
+
+    
+    @IBOutlet weak var TableView: UITableView!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+  
+ 
+
+     
         
-   
+
+        seting()
         
         
         AddButton()
+        
+        
    
     }
     
@@ -50,11 +72,8 @@ class ViewController: UIViewController {
 
         // 버튼 UI 시작
         let actionButton = JJFloatingActionButton()
-
         actionButton.buttonColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
-        
         actionButton.addItem(title: "", image: nil) { item in
-            
 //            let deTailVC = self.storyboard?.instantiateViewController(identifier: "DeTailView")
 //            deTailVC?.modalTransitionStyle = .coverVertical
 //            deTailVC?.modalPresentationStyle = .automatic
@@ -64,7 +83,6 @@ class ViewController: UIViewController {
                    self.navigationController?.pushViewController(pushVC!, animated: true)
        
         }
-
         view.addSubview(actionButton)
         actionButton.translatesAutoresizingMaskIntoConstraints = false
         actionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16).isActive = true
@@ -75,6 +93,22 @@ class ViewController: UIViewController {
         
         // 버튼 UI 끝
     
+        
+    }
+    
+    // 시작시 셋팅 뷰
+    func seting()  {
+ 
+        
+        TableViewModel.TableViewObservable
+            .observe(on: MainScheduler.instance)
+            .bind(to: TableView.rx.items(cellIdentifier: CellId ,cellType:
+                TableViewCell.self)) { index, item, cell in
+                cell.lablel_tableviewCell.text = "\(item.Content!)"
+              
+            }
+            .disposed(by: disposbag)
+        
         
     }
 

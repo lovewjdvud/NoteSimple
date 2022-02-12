@@ -16,23 +16,18 @@ class DetailViewController: UIViewController {
  
     let aboutButton = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(buttonPressed(_:)))
     
-    let aboutButton2 = UIBarButtonItem(image: UIImage(systemName: "lock.open"), style: .plain, target: self, action: #selector(buttonPressed(_:)))
+    let lockOffButton = UIBarButtonItem(image: UIImage(systemName: "lock.open"), style: .plain, target: self, action: #selector(buttonPressed(_:)))
     
+    let lockOnButton = UIBarButtonItem(image: UIImage(systemName: "lock"), style: .plain, target: self, action: #selector(buttonPressed(_:)))
+
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-//
-//        self.navigationItem.rightBarButtonItem = self.detailButton
-//        self.detailButton.title = "저장"
-        
-        
+        navigationItem.rightBarButtonItems = [aboutButton, lockOffButton]
        
-    
-        navigationItem.rightBarButtonItems = [aboutButton, aboutButton2]
-       // navigationItem.ri
+        
     }
     
     

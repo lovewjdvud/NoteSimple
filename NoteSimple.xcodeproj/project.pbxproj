@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		69049F7527B6168400F8F466 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69049F7427B6168400F8F466 /* AppDelegate.swift */; };
 		69049F7727B6168400F8F466 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69049F7627B6168400F8F466 /* SceneDelegate.swift */; };
-		69049F7927B6168400F8F466 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69049F7827B6168400F8F466 /* TableViewController.swift */; };
+		69049F7927B6168400F8F466 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69049F7827B6168400F8F466 /* ViewController.swift */; };
 		69049F7C27B6168400F8F466 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69049F7A27B6168400F8F466 /* Main.storyboard */; };
 		69049F7E27B6168500F8F466 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69049F7D27B6168500F8F466 /* Assets.xcassets */; };
 		69049F8127B6168500F8F466 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69049F7F27B6168500F8F466 /* LaunchScreen.storyboard */; };
@@ -18,6 +18,8 @@
 		69049F9027B6529800F8F466 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69049F8F27B6529800F8F466 /* TableViewCell.swift */; };
 		69049F9227B65F8B00F8F466 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69049F9127B65F8B00F8F466 /* DetailViewController.swift */; };
 		69049F9427B694AD00F8F466 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69049F9327B694AD00F8F466 /* DetailViewModel.swift */; };
+		6943B33527B7B3D90000A310 /* Seevicew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6943B33427B7B3D90000A310 /* Seevicew.swift */; };
+		6943B33727B7B8F30000A310 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6943B33627B7B8F30000A310 /* libsqlite3.0.tbd */; };
 		8C9996FC0764B4991909B352 /* Pods_NoteSimple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219441293E46342203AFF37B /* Pods_NoteSimple.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +28,7 @@
 		69049F7127B6168400F8F466 /* NoteSimple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteSimple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69049F7427B6168400F8F466 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69049F7627B6168400F8F466 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		69049F7827B6168400F8F466 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		69049F7827B6168400F8F466 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		69049F7B27B6168400F8F466 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69049F7D27B6168500F8F466 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69049F8027B6168500F8F466 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		69049F8F27B6529800F8F466 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		69049F9127B65F8B00F8F466 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		69049F9327B694AD00F8F466 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		6943B33427B7B3D90000A310 /* Seevicew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seevicew.swift; sourceTree = "<group>"; };
+		6943B33627B7B8F30000A310 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		CB54C25ACFB75AA62D2E5CA3 /* Pods-NoteSimple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSimple.debug.xcconfig"; path = "Target Support Files/Pods-NoteSimple/Pods-NoteSimple.debug.xcconfig"; sourceTree = "<group>"; };
 		D3040BCCEC85148E6D5412FB /* Pods-NoteSimple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSimple.release.xcconfig"; path = "Target Support Files/Pods-NoteSimple/Pods-NoteSimple.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6943B33727B7B8F30000A310 /* libsqlite3.0.tbd in Frameworks */,
 				8C9996FC0764B4991909B352 /* Pods_NoteSimple.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +78,7 @@
 		69049F7327B6168400F8F466 /* NoteSimple */ = {
 			isa = PBXGroup;
 			children = (
+				6943B33327B7B3C40000A310 /* service */,
 				69049F8A27B61A6400F8F466 /* Model */,
 				69049F8927B61A5900F8F466 /* ViewModel */,
 				69049F8827B61A4D00F8F466 /* View */,
@@ -89,7 +95,7 @@
 		69049F8827B61A4D00F8F466 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69049F7827B6168400F8F466 /* TableViewController.swift */,
+				69049F7827B6168400F8F466 /* ViewController.swift */,
 				69049F8F27B6529800F8F466 /* TableViewCell.swift */,
 				69049F9127B65F8B00F8F466 /* DetailViewController.swift */,
 			);
@@ -116,9 +122,18 @@
 		693C3CF187251152A6EA8ACD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6943B33627B7B8F30000A310 /* libsqlite3.0.tbd */,
 				219441293E46342203AFF37B /* Pods_NoteSimple.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6943B33327B7B3C40000A310 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				6943B33427B7B3D90000A310 /* Seevicew.swift */,
+			);
+			path = service;
 			sourceTree = "<group>";
 		};
 		744FEC1DDFC0BA5B040EE1FB /* Pods */ = {
@@ -244,8 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6943B33527B7B3D90000A310 /* Seevicew.swift in Sources */,
 				69049F8E27B6336C00F8F466 /* Model.swift in Sources */,
-				69049F7927B6168400F8F466 /* TableViewController.swift in Sources */,
+				69049F7927B6168400F8F466 /* ViewController.swift in Sources */,
 				69049F7527B6168400F8F466 /* AppDelegate.swift in Sources */,
 				69049F9027B6529800F8F466 /* TableViewCell.swift in Sources */,
 				69049F7727B6168400F8F466 /* SceneDelegate.swift in Sources */,

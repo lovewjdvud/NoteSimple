@@ -10,7 +10,7 @@ import RxSwift
 
 class DetailViewMdoel {
     
-    
+
     
     
     

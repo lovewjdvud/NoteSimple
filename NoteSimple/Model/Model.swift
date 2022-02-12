@@ -7,6 +7,19 @@
 
 import Foundation
 
-struct NoteItem: Decodable {
+struct NoteItem : Any {
+    var Content : String?
+    var Id: String?
+    var Password: Int?
+    var Date: String?
     
+    
+}
+
+
+
+extension NoteItem {
+    static  func fromMenuItems(Content: String ) -> NoteItem {
+        return NoteItem(Content: Content)
+    }
 }
