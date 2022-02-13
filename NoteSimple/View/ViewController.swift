@@ -33,8 +33,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
   
  
-
-     
         
 
         seting()

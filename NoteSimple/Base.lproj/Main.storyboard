@@ -85,6 +85,9 @@
                         <viewLayoutGuide key="safeArea" id="zTv-Nl-6ta"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="textview_detail" destination="Q5u-02-Vai" id="xC2-pD-B0s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nji-Hk-Qzy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
