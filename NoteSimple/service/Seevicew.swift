@@ -12,14 +12,15 @@ import RxRelay
 
 class SqliteClass {
     
+   // var noteitem = NoteItem()
+    var noteitem: [NoteItem] = []
     var db: OpaquePointer?
     var filepathconfirm = "/Users/songjeongpyeong/Library/Developer/CoreSimulator/Devices/0053FC45-93A1-4CA1-AB3C-FFFD8FD6FB7B/data/Containers/Data/Application/84454F95-3333-4F71-8FC1-C38F5619E134/Documents/NoteSimpeData.sqlite"
     
     var filemanager: FileManager?
-    
-    
-    
-    
+   // var tableviewmodel =  TableViewMdoel()
+    var disposbag = DisposeBag()
+
     
     func createSqlite()   {
         
@@ -30,29 +31,39 @@ class SqliteClass {
         }
         
         // SQLite 생성하기
-        let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("NoteSimpeData.sqlite")
+        let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("NoteSimpe.sqlite")
    
         if sqlite3_open(fileURL.path, &db) != SQLITE_OK{
             print("error opening database")
         }
         
         print("\(fileURL.path)")
-        if sqlite3_exec(db, "CREATE TABLE IF NOT EXISTS NoteSimpe(nId INTEGER PRIMARY KEY AUTOINCREMENT, nContent TEXT, nPassword TEXT, nDate TEXT)", nil, nil, nil) != SQLITE_OK{
+        if sqlite3_exec(db, "CREATE TABLE IF NOT EXISTS NoteSimpe (nId INTEGER PRIMARY KEY AUTOINCREMENT, nContent TEXT, nPassword TEXT, nDate TEXT)", nil, nil, nil) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("error creating table: \(errmsg)")
         }
         
         
+        
+       
     }
 
     
     
     func InsetSqlite ( Content:String,Password:String, insertdate:String) {
+       
+        let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("NoteSimpe.sqlite")
+   
+        if sqlite3_open(fileURL.path, &db) != SQLITE_OK{
+            print("error opening database")
+        }
+        
         var stmt: OpaquePointer?
         let SQLITE_TRANSIENT = unsafeBitCast(-1, to: sqlite3_destructor_type.self)
-        
+     
         let queryString = "INSERT INTO NoteSimpe (nContent,nPassword,nDate) VALUES (?,?,?)"
   
+        
         if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("error preparing insert: \(errmsg)")
@@ -65,13 +76,13 @@ class SqliteClass {
   
             return
         }
-        if sqlite3_bind_text(stmt, 2, Password, -1, SQLITE_TRANSIENT) != SQLITE_OK{
+        if sqlite3_bind_text(stmt, 2, "sd", -1, SQLITE_TRANSIENT) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("error binding dept: \(errmsg)")
   
             return
         }
-        if sqlite3_bind_text(stmt, 3, insertdate, -1, SQLITE_TRANSIENT) != SQLITE_OK{
+        if sqlite3_bind_text(stmt, 3, "sdsd", -1, SQLITE_TRANSIENT) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("error binding phone: \(errmsg)")
   
@@ -87,33 +98,128 @@ class SqliteClass {
         
     }
     
- func selectSqlite(onComplete: @escaping (Result<Data, Error>) -> Void) {
-     //   studentsList.removeAll()
-        
-        let queryString = "SELECT * FROM student"
     
-        var stmt : OpaquePointer?
-        
-        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK {
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("error preparing select: \(errmsg)")
-            return
-        }
-        
-        while(sqlite3_step(stmt) == SQLITE_ROW){
-            let id = sqlite3_column_int(stmt, 0)
-            let name = String(cString: sqlite3_column_text(stmt, 1))
-            let dept = String(cString: sqlite3_column_text(stmt, 2))
-            let phone = String(cString: sqlite3_column_text(stmt, 3))
+    func sqlselect(onComplete: @escaping (Result<Array<Any>, Error>)-> Void) {
+        //   studentsList.removeAll()
+        createSqlite()
+       let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("NoteSimpe.sqlite")
+
+       if sqlite3_open(fileURL.path, &db) != SQLITE_OK{
+           print("error opening database")
+       }
+       
+           let queryString = "SELECT * FROM NoteSimpe"
+       
+           var stmt : OpaquePointer?
            
-            print(id, name, dept, phone)
+           if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK {
+               let errmsg = String(cString: sqlite3_errmsg(db)!)
+               print("error preparing select: \(errmsg)")
+            onComplete(.failure(sqlite3_errmsg(db)! as! Error))
             
-            //studentsList.append(Students(id: Int(id), name: String(describing: name), dept: String(describing: dept), phone: String(describing: phone)))
-            
-        }
-       // self.tv_ListView.reloadData()
+            return
+          
+           }
+        
+           
+           while(sqlite3_step(stmt) == SQLITE_ROW){
+               let id = Int(sqlite3_column_int(stmt, 0))
+               let Content = String(cString: sqlite3_column_text(stmt, 1))
+               let Password = String(cString: sqlite3_column_text(stmt, 2))
+               let SelectDate = String(cString: sqlite3_column_text(stmt, 3))
+              
+               print(id, Content, Password, SelectDate)
+             
+               
+             //let noteite =  NoteItem.fromMenuItems(Content: Content, Id: id, Password: Password, Date: SelectDate)
+               noteitem.append(NoteItem(Content: Content, Id: id, Password: Password, Date: SelectDate))
+    }
+        onComplete(.success(noteitem))
     }
     
+    
+    func fetchAllMenus() -> Observable<Array<Any>>  {
+       
+         
+        
+         return Observable.create { emitter in
+            
+            self.sqlselect() { result in
+                switch result {
+                case let .success(note):
+                    emitter.onNext(note)
+                    emitter.onCompleted()
+                case let .failure(err):
+                    emitter.onError(err)
+                
+                }
+                
+            }
+            
+            
+            return Disposables.create()
+         }
+            
+    }
+    
+    
+    
+
+}
+//
+//    Observable.just(noteitem)
+//                .observe(on: ConcurrentDispatchQueueScheduler.init(qos: .default))
+//
+//                .bind(to: tableviewmodel.TableViewObservable)
+//                .disposed(by: disposbag)
+//
+//
+//        func selectSqlite() -> Observable<Any> {
+//
+//
+//            return Observable.create { [self] emitter in
+//
+//                fetchAllMenus() { result in
+//
+//                    switch result {
+//                    case let .success(noteitem):
+//                        emitter.onNext(noteitem)
+//                        emitter.onCompleted()
+//                    case let .failure(err):
+//                        emitter.onError(err)
+//
+//                    }
+//            }
+//
+//
+//                return Disposables.create()
+//
+//    }
+//
+//
+//
+//
+//
+//    }
+    
+    
+    
+
+
+
+//            Observable.just(noteitem)
+//                .observe(on: ConcurrentDispatchQueueScheduler.init(qos: .default))
+//                .bind(to: tableviewmodel.TableViewObservable)
+//                .disposed(by: disposbag)
+//
+//studentsList.append(Students(id: Int(id), name: String(describing: name), dept: String(describing: dept), phone: String(describing: phone)))
+
+
+
+
+
+
+
 //    static func selectSqliteRx() -> Observable<Array<Any>> {
 //        return Observable.create { emitter in
 //
@@ -134,4 +240,3 @@ class SqliteClass {
 //        return Disposables.create() as! Observable<Array<Any>>
 //   }
     
-}

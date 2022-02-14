@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     let TableViewModel = TableViewMdoel()       // 테이블뷰 viewmpdel
     var disposbag = DisposeBag()
     
+    
+    
     let CellId = "TableViewCell" //TableViewCell
     
     
@@ -42,6 +44,10 @@ class ViewController: UIViewController {
         
         
    
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        TableView.reloadData()
     }
     
     
@@ -102,7 +108,7 @@ class ViewController: UIViewController {
             .observe(on: MainScheduler.instance)
             .bind(to: TableView.rx.items(cellIdentifier: CellId ,cellType:
                 TableViewCell.self)) { index, item, cell in
-                cell.lablel_tableviewCell.text = "\(item.Content!)"
+                cell.lablel_tableviewCell.text = "\(item.Content)"
               
             }
             .disposed(by: disposbag)

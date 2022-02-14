@@ -9,17 +9,23 @@ import Foundation
 
 struct NoteItem : Any {
     var Content : String?
-    var Id: String?
-    var Password: Int?
+    var Id: Int?
+    var Password: String?
     var Date: String?
     
     
-}
-
-
-
-extension NoteItem {
-    static  func fromMenuItems(Content: String ) -> NoteItem {
-        return NoteItem(Content: Content)
+    init(Content:String, Id:Int, Password:String,Date:String) {
+      
+        self.Content = Content
+        self.Id = Id
+        self.Password = Password
+        self.Date = Date
+        
+        
     }
+    
 }
+
+
+
+

@@ -20,6 +20,7 @@
 		69049F9427B694AD00F8F466 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69049F9327B694AD00F8F466 /* DetailViewModel.swift */; };
 		6943B33527B7B3D90000A310 /* Seevicew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6943B33427B7B3D90000A310 /* Seevicew.swift */; };
 		6943B33727B7B8F30000A310 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6943B33627B7B8F30000A310 /* libsqlite3.0.tbd */; };
+		69D6FE9B27BA361A006058AD /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D6FE9A27BA361A006058AD /* Note.swift */; };
 		8C9996FC0764B4991909B352 /* Pods_NoteSimple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219441293E46342203AFF37B /* Pods_NoteSimple.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		69049F9327B694AD00F8F466 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		6943B33427B7B3D90000A310 /* Seevicew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seevicew.swift; sourceTree = "<group>"; };
 		6943B33627B7B8F30000A310 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		69D6FE9A27BA361A006058AD /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		CB54C25ACFB75AA62D2E5CA3 /* Pods-NoteSimple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSimple.debug.xcconfig"; path = "Target Support Files/Pods-NoteSimple/Pods-NoteSimple.debug.xcconfig"; sourceTree = "<group>"; };
 		D3040BCCEC85148E6D5412FB /* Pods-NoteSimple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSimple.release.xcconfig"; path = "Target Support Files/Pods-NoteSimple/Pods-NoteSimple.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +80,8 @@
 		69049F7327B6168400F8F466 /* NoteSimple */ = {
 			isa = PBXGroup;
 			children = (
+				69D6FE9927BA360D006058AD /* Note */,
+				69D6FE9827BA3389006058AD /* noteItem */,
 				6943B33327B7B3C40000A310 /* service */,
 				69049F8A27B61A6400F8F466 /* Model */,
 				69049F8927B61A5900F8F466 /* ViewModel */,
@@ -134,6 +138,21 @@
 				6943B33427B7B3D90000A310 /* Seevicew.swift */,
 			);
 			path = service;
+			sourceTree = "<group>";
+		};
+		69D6FE9827BA3389006058AD /* noteItem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = noteItem;
+			sourceTree = "<group>";
+		};
+		69D6FE9927BA360D006058AD /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				69D6FE9A27BA361A006058AD /* Note.swift */,
+			);
+			path = Note;
 			sourceTree = "<group>";
 		};
 		744FEC1DDFC0BA5B040EE1FB /* Pods */ = {
@@ -264,6 +283,7 @@
 				69049F7927B6168400F8F466 /* ViewController.swift in Sources */,
 				69049F7527B6168400F8F466 /* AppDelegate.swift in Sources */,
 				69049F9027B6529800F8F466 /* TableViewCell.swift in Sources */,
+				69D6FE9B27BA361A006058AD /* Note.swift in Sources */,
 				69049F7727B6168400F8F466 /* SceneDelegate.swift in Sources */,
 				69049F8C27B6334D00F8F466 /* TableViewModel.swift in Sources */,
 				69049F9227B65F8B00F8F466 /* DetailViewController.swift in Sources */,

@@ -17,10 +17,14 @@ class DetailViewMdoel {
     
     
     func insertDetailViewModel(Content:String, Password:String)  {
-        var insertdate = "2022-2-12"
+      //  var insertdate = "2022-2-12"
         
-        Sqllite.InsetSqlite(Content: Content, Password: Password, insertdate: insertdate)
+        Sqllite.InsetSqlite(Content: Content, Password: "", insertdate: "2022-2-12")
         
     }
+    
+    
+
+    
     
 }

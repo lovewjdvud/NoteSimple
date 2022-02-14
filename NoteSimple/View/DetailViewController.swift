@@ -26,8 +26,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         navigationItem.rightBarButtonItems = [aboutButton, lockOffButton]
-       
-        
+      
     }
     
     
@@ -35,7 +34,12 @@ class DetailViewController: UIViewController {
     
     
     @objc private func buttonPressed(_ sender: Any) {
+        
+        
+       
+        
         detailviewmodel.insertDetailViewModel(Content: textview_detail.text , Password: "")
+       
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -47,11 +51,10 @@ class DetailViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    func DetailSetting()  {
-        
-        
-    }
+
     
+    
+  
     
     
     
