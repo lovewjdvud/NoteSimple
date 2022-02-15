@@ -14,35 +14,29 @@ class TableViewMdoel {
     
   
     
-    var TableViewObservable = BehaviorSubject<[Note]>(value: [])
+   lazy var TableViewObservable = BehaviorSubject<[Note]>(value: [])
     
    var Sqllite = SqliteClass()
    
-    var noteitem: [NoteItem] = []
+  //  var noteitem: [NoteItem] = []
     var disposbag = DisposeBag()
    
     init() {
     
         _ = Sqllite.fetchAllMenus()
-           
             .map{ menusItem -> [Note] in
                 var menus: [Note] = []
                 menusItem.enumerated().forEach { index ,item in
-                
-                    let menu = Note.fromMenuItems(id: index, item: item as! NoteItem)
+                    print("정평1 \(item)")
+                    let menu = Note.fromMenuItems(id: index, item: item )
                     menus.append(menu)
-                    
                 }
                 print("정평 \(menus)")
                 return menus
             }
+            .take(1) 
             .bind(to: TableViewObservable)
-           
-         
-            
     }
-            
-
 }
         
             

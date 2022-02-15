@@ -99,7 +99,7 @@ class SqliteClass {
     }
     
     
-    func sqlselect(onComplete: @escaping (Result<Array<Any>, Error>)-> Void) {
+    func sqlselect(onComplete: @escaping (Result<[NoteItem], Error>)-> Void) {
         //   studentsList.removeAll()
         createSqlite()
        let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("NoteSimpe.sqlite")
@@ -138,13 +138,13 @@ class SqliteClass {
     }
     
     
-    func fetchAllMenus() -> Observable<Array<Any>>  {
+    func fetchAllMenus() -> Observable<[NoteItem]>  {
        
          
         
          return Observable.create { emitter in
             
-            self.sqlselect() { result in
+            self.sqlselect() {  result in
                 switch result {
                 case let .success(note):
                     emitter.onNext(note)

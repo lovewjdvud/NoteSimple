@@ -13,18 +13,9 @@ import JJFloatingActionButton
 
 class ViewController: UIViewController {
 
-    
-    
-    
     let TableViewModel = TableViewMdoel()       // 테이블뷰 viewmpdel
     var disposbag = DisposeBag()
-    
-    
-    
     let CellId = "TableViewCell" //TableViewCell
-    
-    
-
     
     @IBOutlet weak var TableView: UITableView!
     
@@ -33,13 +24,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-  
- 
-        
-
-        seting()
-        
-        
+        TableViewModel.TableViewObservable
+            .observe(on: MainScheduler.instance)
+            
+            .bind(to: TableView.rx.items(cellIdentifier: CellId ,cellType:
+                TableViewCell.self)) { index, item, cell in
+                
+                cell.lablel_tableviewCell?.text = "\(item.Content)"
+                
+            }
+            .disposed(by: disposbag)
+       // seting()
         AddButton()
         
         
@@ -47,6 +42,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         TableView.reloadData()
     }
     

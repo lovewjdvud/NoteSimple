@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Note  {
+struct Note : Decodable {
     var Content : String
     var Id: Int
     var Password: String
