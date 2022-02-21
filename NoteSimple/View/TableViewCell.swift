@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import RxSwift
 
 class TableViewCell: UITableViewCell {
 
     @IBOutlet weak var lablel_tableviewCell: UILabel!
+    
+    var disposeBag = DisposeBag()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,8 +21,15 @@ class TableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
+        
+        
+    }
+  
 
 }

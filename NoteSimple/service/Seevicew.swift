@@ -19,7 +19,7 @@ class SqliteClass {
     
     var filemanager: FileManager?
    // var tableviewmodel =  TableViewMdoel()
-    var disposbag = DisposeBag()
+    //var disposbag = DisposeBag()
 
     
     func createSqlite()   {
@@ -31,7 +31,7 @@ class SqliteClass {
         }
         
         // SQLite 생성하기
-        let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("NoteSimpe.sqlite")
+        let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("NoteSimpe2.sqlite")
    
         if sqlite3_open(fileURL.path, &db) != SQLITE_OK{
             print("error opening database")
@@ -52,7 +52,7 @@ class SqliteClass {
     
     func InsetSqlite ( Content:String,Password:String, insertdate:String) {
        
-        let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("NoteSimpe.sqlite")
+        let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("NoteSimpe2.sqlite")
    
         if sqlite3_open(fileURL.path, &db) != SQLITE_OK{
             print("error opening database")
@@ -102,7 +102,8 @@ class SqliteClass {
     func sqlselect(onComplete: @escaping (Result<[NoteItem], Error>)-> Void) {
         //   studentsList.removeAll()
         createSqlite()
-       let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("NoteSimpe.sqlite")
+        
+       let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("NoteSimpe2.sqlite")
 
        if sqlite3_open(fileURL.path, &db) != SQLITE_OK{
            print("error opening database")

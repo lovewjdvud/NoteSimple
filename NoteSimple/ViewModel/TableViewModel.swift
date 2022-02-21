@@ -10,11 +10,12 @@ import RxSwift
 import RxCocoa
 
 
+
 class TableViewMdoel {
     
   
     
-   lazy var TableViewObservable = BehaviorSubject<[Note]>(value: [])
+   lazy var TableViewObservable = BehaviorRelay<[NoteItem]>(value: [])
     
    var Sqllite = SqliteClass()
    
@@ -23,32 +24,56 @@ class TableViewMdoel {
    
     init() {
     
-        _ = Sqllite.fetchAllMenus()
-            .map{ menusItem -> [Note] in
-                var menus: [Note] = []
-                menusItem.enumerated().forEach { index ,item in
-                    print("정평1 \(item)")
-                    let menu = Note.fromMenuItems(id: index, item: item )
-                    menus.append(menu)
-                }
-                print("정평 \(menus)")
-                return menus
-            }
-            .take(1) 
-            .bind(to: TableViewObservable)
+        loadData()
     }
+    
+    
+    func loadData()  {
+        
+        _ = Sqllite.fetchAllMenus()
+            .observe(on: ConcurrentDispatchQueueScheduler.init(qos: .default))
+
+            .map{ menusItem -> [NoteItem] in
+
+                return menusItem
+            }
+          
+            //.take(1)
+          
+            .subscribe(onNext: { self.TableViewObservable.accept($0)})
+           .disposed(by: disposbag)
+    }
+    
+    
+    
+    
+    func insertTavleViewModelsds(Content:String, Password:String)  {
+        
+      
+        Sqllite.InsetSqlite(Content: Content, Password: "", insertdate: "2022-2-12")
+       // disposeBag = DisposeBag()
+        loadData()
+    
 }
         
             
             
         
+}
         
         
         
         
         
-        
-        
+//            .map{ menusItem -> [Note] in
+//                var menus: [Note] = []
+//                menusItem.enumerated().forEach { index ,item in
+//                    print("정평1 \(item)")
+//                    let menu = Note.fromMenuItems(id: index, item: item as! NoteItem )
+//                    menus.append(menu)
+//                }
+//                return menus
+//            }
         
       //Sqllite.createSqlite()
       
