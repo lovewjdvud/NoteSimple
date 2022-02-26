@@ -18,7 +18,11 @@ class ViewController: UIViewController {
     var disposbag = DisposeBag()
     let CellId = "TableViewCell" //TableViewCell
     var noteitem: [NoteItem] = []
-        
+    lazy var TableViewObservables = BehaviorRelay<[NoteItem]>(value: [])
+    
+    lazy var edictButton = UIBarButtonItem(title: "편집", style: .plain, target: self, action: nil)
+    lazy var edictCompletedButton = UIBarButtonItem(title: "완료", style: .plain, target: self, action: nil)
+    
     
     @IBOutlet weak var TableView: UITableView!
     
@@ -30,9 +34,9 @@ class ViewController: UIViewController {
           
   
  
-        seting()
+    
         AddButton()
-        
+        seting()
         
    
     }
@@ -44,30 +48,26 @@ class ViewController: UIViewController {
      
     }
     
-    
-    override func setEditing (_ editing:Bool, animated:Bool)
-    {
-       super.setEditing(editing,animated:animated)
-        if(self.isEditing)
-       {
-            self.editButtonItem.title = "완료"
-       }else
-       {
-        self.editButtonItem.title = "편집"
-       }
-     }
-    
+//
+//    override func setEditing (_ editing:Bool, animated:Bool)
+//    {
+//       super.setEditing(editing,animated:animated)
+//        if(self.isEditing)
+//       {
+//            self.editButtonItem.title = "완료"
+//       }else
+//       {
+//        self.editButtonItem.title = "편집"
+//       }
+//     }
+//
     func AddButton()  {
 
-        // edit버튼을 만들과 삭제 기능 추가하기 ,왼족으로 배치
-        self.navigationItem.leftBarButtonItem = self.editButtonItem
-        self.editButtonItem.title = "편집"
+        self.navigationItem.leftBarButtonItem = editButtonItem
+        editButtonItem.tintColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
        
-        self.editButtonItem.tintColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
-       // self.navigationItem.leftBarButtonItem!.title = "Change"
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-
         // 버튼 UI 시작
         let actionButton = JJFloatingActionButton()
         actionButton.buttonColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
@@ -88,21 +88,58 @@ class ViewController: UIViewController {
     
     // 시작시 셋팅 뷰
     func seting()  {
+
         
         TableViewModel.TableViewObservable
             .observe(on: MainScheduler.instance)
             .filter { !$0.isEmpty }
             .bind(to: TableView.rx.items(cellIdentifier: CellId ,cellType:
                 TableViewCell.self)) { index, item, cell in
-                
                 cell.lablel_tableviewCell?.text = "\(item.Content!)"
             }
             .disposed(by: disposbag)
         
+        // 삭제
+        Observable
+            .zip(TableView.rx.itemDeleted, TableView.rx.modelDeleted(NoteItem.self))
+            .map { "셀 선택 \($0),\n\($1)" }
+            .subscribe (onNext : { index in
+              
+            })
+            .disposed(by: disposbag)
+        
+        
+        //선택이동
+        TableView.rx.itemMoved
+            .map { "아이템 이동 \n= \($0)" }
+            .subscribe (onNext : { index in
+                print("\(index) 최종 itemMoved")
+            })
+            .disposed(by: disposbag)
+        
+        editButtonItem.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.toggleEditMode()
+            })
+            .disposed(by: disposbag)
+        
+        
+        Observable
+            .zip(TableView.rx.itemSelected, TableView.rx.modelSelected(NoteItem.self))
+            .map { "셀 선택 \($0),\n\($1)" }
+            .subscribe (onNext : { index in
+                print("\(index) 최종")
+            })
+            .disposed(by: disposbag)
 
         
     }
 
+    private func toggleEditMode() {
+        let toggleEditMode = !TableView.isEditing
+        TableView.setEditing(toggleEditMode, animated: true)
+    }
 
+    
 }
 

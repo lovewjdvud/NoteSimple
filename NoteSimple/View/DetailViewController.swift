@@ -101,13 +101,9 @@ class DetailViewController: UIViewController {
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self]  in
                 //self?.Detaillockornot()
-                
                 self?.funcalert(NoteText: (self?.textview_detail.text)!)
                     .subscribe{ _ in
-                        
-                        print("detailview 마무리")
                     }
-                    
                     .disposed(by: self!.disposeBag)
 
             })
