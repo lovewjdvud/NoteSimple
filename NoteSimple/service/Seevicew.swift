@@ -76,13 +76,13 @@ class SqliteClass {
   
             return
         }
-        if sqlite3_bind_text(stmt, 2, "sd", -1, SQLITE_TRANSIENT) != SQLITE_OK{
+        if sqlite3_bind_text(stmt, 2, Password, -1, SQLITE_TRANSIENT) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("error binding dept: \(errmsg)")
   
             return
         }
-        if sqlite3_bind_text(stmt, 3, "sdsd", -1, SQLITE_TRANSIENT) != SQLITE_OK{
+        if sqlite3_bind_text(stmt, 3, insertdate, -1, SQLITE_TRANSIENT) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("error binding phone: \(errmsg)")
   
@@ -136,6 +136,7 @@ class SqliteClass {
                noteitem.append(NoteItem(Content: Content, Id: id, Password: Password, Date: SelectDate))
     }
         onComplete(.success(noteitem))
+
     }
     
     
@@ -149,6 +150,7 @@ class SqliteClass {
                 switch result {
                 case let .success(note):
                     emitter.onNext(note)
+                    self.noteitem.removeAll()
                     emitter.onCompleted()
                 case let .failure(err):
                     emitter.onError(err)
@@ -167,7 +169,8 @@ class SqliteClass {
     
 
 }
-//
+
+
 //    Observable.just(noteitem)
 //                .observe(on: ConcurrentDispatchQueueScheduler.init(qos: .default))
 //

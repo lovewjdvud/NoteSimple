@@ -18,8 +18,7 @@ class ViewController: UIViewController {
     var disposbag = DisposeBag()
     let CellId = "TableViewCell" //TableViewCell
     var noteitem: [NoteItem] = []
-    
-    
+        
     
     @IBOutlet weak var TableView: UITableView!
     
@@ -40,22 +39,8 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        TableViewModel.TableViewObservable
-            .accept(noteitem)
-        
-        
-//        self.TableView.delegate = nil
-//         self.TableView.dataSource = nil
-//        seting()
-      //  TableViewModel.TableViewObservable
-            
-        
-        //self.TableView.delegate = nil
-         //self.TableView.dataSource = nil
-        //seting()
-        //disposbag = DisposeBag()
-        //TableViewModel.loadData()
-      // TableViewModel.loadData()
+      //  TableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+       TableViewModel.loadData()
      
     }
     
@@ -88,11 +73,6 @@ class ViewController: UIViewController {
         actionButton.buttonColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         actionButton.addItem(title: "", image: nil) { item in
             
-//            let deTailVC = self.storyboard?.instantiateViewController(identifier: "DeTailView")
-//            deTailVC?.modalTransitionStyle = .coverVertical
-//            deTailVC?.modalPresentationStyle = .automatic
-//            self.present(deTailVC!, animated: true, completion: nil)
-            
             let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "DeTailView")
                     
                    self.navigationController?.pushViewController(pushVC!, animated: true)
@@ -102,11 +82,6 @@ class ViewController: UIViewController {
         actionButton.translatesAutoresizingMaskIntoConstraints = false
         actionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16).isActive = true
         actionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16).isActive = true
-
-        // last 4 lines can be replaced with
-        // actionButton.display(inViewController: self)
-        
-        // 버튼 UI 끝
     
         
     }
@@ -114,23 +89,12 @@ class ViewController: UIViewController {
     // 시작시 셋팅 뷰
     func seting()  {
         
-        
-        // 처음 로딩할 때 하고, 당겨서 새로고침 할 때
-//        let firstLoad = rx.viewWillAppear
-//            .take(1)
-//            .map { _ in () }
-//        let reload = TableView.refreshControl?.rx
-//            .controlEvent(.valueChanged)
-//            .map { _ in () } ?? Observable.just(())
-//
-//
-   
-        
         TableViewModel.TableViewObservable
             .observe(on: MainScheduler.instance)
             .filter { !$0.isEmpty }
             .bind(to: TableView.rx.items(cellIdentifier: CellId ,cellType:
                 TableViewCell.self)) { index, item, cell in
+                
                 cell.lablel_tableviewCell?.text = "\(item.Content!)"
             }
             .disposed(by: disposbag)
