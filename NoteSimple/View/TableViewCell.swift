@@ -8,7 +8,10 @@
 import UIKit
 import RxSwift
 
-class TableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell ,passWordcell{
+    
+    var protocolpassword: String = ""
+    
 
     @IBOutlet weak var lablel_tableviewCell: UILabel!
     
@@ -17,11 +20,14 @@ class TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-    
+       
+        
+        
     }
     
     override func prepareForReuse() {

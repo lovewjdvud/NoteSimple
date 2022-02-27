@@ -12,7 +12,15 @@ import RxViewController
 import JJFloatingActionButton
 
 
+protocol passWordcell {
+    
+    var protocolpassword: String { get }
+}
+
 class ViewController: UIViewController {
+  
+    var delegate: passWordcell?
+    
 
     let TableViewModel = TableViewMdoel()       // 테이블뷰 viewmpdel
     var disposbag = DisposeBag()
@@ -32,7 +40,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
           
-  
+ 
  
     
         AddButton()
@@ -95,6 +103,13 @@ class ViewController: UIViewController {
             .filter { !$0.isEmpty }
             .bind(to: TableView.rx.items(cellIdentifier: CellId ,cellType:
                 TableViewCell.self)) { index, item, cell in
+                
+                if item.Password != "" {
+                    
+                  //  self.protocolpassword = item.Password!
+                    
+                }
+                
                 cell.lablel_tableviewCell?.text = "\(item.Content!)"
             }
             .disposed(by: disposbag)

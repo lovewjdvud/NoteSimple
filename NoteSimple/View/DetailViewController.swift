@@ -173,47 +173,4 @@ class DetailViewController: UIViewController {
     }
     
     
-    func Detaillockornot() {
-        print("lockornot = \(lockornot)")
-        if lockornot {
-            let art = UIAlertController(title: "비밀번호 입력", message: "비밀번호 꼭 기억해주세요", preferredStyle: .alert)
-            art.addTextField()
-            let Completed = UIAlertAction(title: "완료", style: .default, handler: { [weak self]  _ in
-                
-                self?.passWord = (art.textFields?[0].text)!
-                
-                if self?.passWord == "" {
-                let art2 = UIAlertController(title: "경고", message: "(비밀번호를 입력해주세요)", preferredStyle: .alert)
-                let Cancel2 = UIAlertAction(title: "확인", style: .cancel)
-                    art2.view.tintColor = UIColor.red
-                    art2.addAction(Cancel2)
-                    self?.present(art2, animated: true, completion: nil)
-                    
-                } else {
-                    self?.insertdsds(passWord2: self!.passWord)
-                }
-                
-            })
-            let Cancel = UIAlertAction(title: "취소", style: .cancel)
-            art.addAction(Completed)
-            art.addAction(Cancel)
-            self.present(art, animated: true, completion: nil)
-            
-        } else {
-            insertdsds(passWord2: "")
-        }
-        
-    }
-    
-    func insertdsds(passWord2: String?) {
-        
-        print("insertdsds")
-      //  viewmodel.insertTavleViewModelsds(Content: textview_detail.text, Password: passWord2!)
-        // self.navigationController?.popViewController(animated: true)
-        
-    }
-  
-    
-    
-    
 }
