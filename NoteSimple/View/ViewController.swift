@@ -12,25 +12,25 @@ import RxViewController
 import JJFloatingActionButton
 
 
-protocol passWordcell {
-    
-    var protocolpassword: String { get }
-}
 
 class ViewController: UIViewController {
+ 
+
+   
   
-    var delegate: passWordcell?
-    
+
+    let actionButton = JJFloatingActionButton()
 
     let TableViewModel = TableViewMdoel()       // 테이블뷰 viewmpdel
     var disposbag = DisposeBag()
     let CellId = "TableViewCell" //TableViewCell
-    var noteitem: [NoteItem] = []
+    var noteitem : NoteItem?
     lazy var TableViewObservables = BehaviorRelay<[NoteItem]>(value: [])
     
     lazy var edictButton = UIBarButtonItem(title: "편집", style: .plain, target: self, action: nil)
     lazy var edictCompletedButton = UIBarButtonItem(title: "완료", style: .plain, target: self, action: nil)
     
+    var DetailpassWord = ""
     
     @IBOutlet weak var TableView: UITableView!
     
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
           
  
- 
+        
     
         AddButton()
         seting()
@@ -77,15 +77,15 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         // 버튼 UI 시작
-        let actionButton = JJFloatingActionButton()
+      
         actionButton.buttonColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         actionButton.addItem(title: "", image: nil) { item in
             
             let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "DeTailView")
-                    
                    self.navigationController?.pushViewController(pushVC!, animated: true)
- 
+            
         }
+        
         view.addSubview(actionButton)
         actionButton.translatesAutoresizingMaskIntoConstraints = false
         actionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16).isActive = true
@@ -103,14 +103,8 @@ class ViewController: UIViewController {
             .filter { !$0.isEmpty }
             .bind(to: TableView.rx.items(cellIdentifier: CellId ,cellType:
                 TableViewCell.self)) { index, item, cell in
+                cell.updateUI(item: item)
                 
-                if item.Password != "" {
-                    
-                  //  self.protocolpassword = item.Password!
-                    
-                }
-                
-                cell.lablel_tableviewCell?.text = "\(item.Content!)"
             }
             .disposed(by: disposbag)
         
@@ -138,17 +132,75 @@ class ViewController: UIViewController {
             })
             .disposed(by: disposbag)
         
-        
-        Observable
-            .zip(TableView.rx.itemSelected, TableView.rx.modelSelected(NoteItem.self))
-            .map { "셀 선택 \($0),\n\($1)" }
-            .subscribe (onNext : { index in
-                print("\(index) 최종")
+        TableView.rx.modelSelected(NoteItem.self)
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] member in
+              
+               
+                self?.presentDetail(of: member)
+                
             })
             .disposed(by: disposbag)
-
-        
     }
+    
+    private func presentDetail(of member: NoteItem) {
+        guard let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "DeTailView") as? DetailViewController else {return}
+        pushVC.selectNote = member
+        pushVC.detailorno = true
+        
+        if member.Password == "" {
+            self.navigationController?.pushViewController(pushVC, animated: true)
+        } else{
+            
+            alert(of: member)
+            
+            
+            
+        }
+    }
+    
+    func alert(of noteItem: NoteItem)  {
+        
+    // 비밀번호가 있을 때
+        guard let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "DeTailView") as? DetailViewController else {return}
+     
+        
+        let art = UIAlertController(title: "비밀번호 입력", message: "비밀번호 꼭 기억해주세요", preferredStyle: .alert)
+        art.addTextField()
+        let Completed = UIAlertAction(title: "완료", style: .default, handler: { [weak self]  _ in
+            self?.DetailpassWord = (art.textFields?[0].text)!
+            
+            // 비밀번호 입력이 안되었을때
+            if self?.DetailpassWord == "" || noteItem.Password !=  self?.DetailpassWord  {
+            let art2 = UIAlertController(title: "경고", message: "(비밀번호를 확인해주세요!)", preferredStyle: .alert)
+            let Cancel2 = UIAlertAction(title: "확인", style: .cancel  , handler: {  _ in
+               
+            })
+                art2.view.tintColor = UIColor.red
+                art2.addAction(Cancel2)
+                self?.present(art2, animated: true, completion: nil)
+              
+                // 비밀번호가 입력 되었을때
+            } else if noteItem.Password ==  self?.DetailpassWord  {
+                pushVC.selectNote = noteItem
+                pushVC.detailorno = true
+                self?.navigationController?.pushViewController(pushVC, animated: true)
+            }
+            
+        })
+        let Cancel = UIAlertAction(title: "취소", style: .cancel ,  handler: {  _ in
+         
+        })
+        
+        
+        art.addAction(Completed)
+        art.addAction(Cancel)
+        self.present(art, animated: true, completion: nil)
+        
+        
+    
+    }
+
 
     private func toggleEditMode() {
         let toggleEditMode = !TableView.isEditing

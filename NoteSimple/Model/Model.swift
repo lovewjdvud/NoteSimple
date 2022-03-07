@@ -26,9 +26,11 @@ struct NoteItem : Any {
     
 }
 
-extension Note {
-    static  func fromMenuItemsss(id: Int, item: NoteItem) -> Note {
-        return Note(Content: item.Content!, Id: item.Id!, Password: item.Password!, Date: item.Date!)    }
+extension NoteItem {
+    static let EMPTY = NoteItem(Content: "", Id: 0, Password: "", Date: "")
+    
+    static  func fromMenuItemsss(id: Int, item: NoteItem) -> NoteItem {
+        return NoteItem(Content: item.Content!, Id: item.Id!, Password: item.Password!, Date: item.Date!)    }
 }
 
 

@@ -16,15 +16,19 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var textview_detail: UITextView!
   
     
+    var selectNote = NoteItem.EMPTY
  
     
     var Sqllite = SqliteClass()
     var detailviewmodel = DetailViewMdoel()
     var viewmodel = TableViewMdoel()
     var disposeBag = DisposeBag()
+   
     
     var lockornot = false
+    var detailorno = false
     var passWord = ""
+
   
     
   lazy var TableViewObservable = BehaviorSubject<UIBarButtonItem>(value: lockOffButton)
@@ -46,13 +50,21 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-   
+        print("selectNote = \(String(describing: selectNote.Content!))")
+        print("textview_detail = \(detailorno)")
         
         Detailsetting()
+     
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+      
         self.passWord = ""
+        
+
+        
+        self.detailorno = false
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -71,9 +83,12 @@ class DetailViewController: UIViewController {
     }
     
     func Detailsetting()  {
+        
+        
+        if detailorno {
+            textview_detail.text = selectNote.Content!
+        }
     
-        
-        
         navigationItem.rightBarButtonItems = [aboutButton, lockOffButton]
         lockOffButton.tintColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
         aboutButton.tintColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
@@ -136,14 +151,14 @@ class DetailViewController: UIViewController {
                     art2.view.tintColor = UIColor.red
                     art2.addAction(Cancel2)
                     self?.present(art2, animated: true, completion: nil)
-                    print("detailview 비밀 번호가 입력 안되었을때")
+                  
                     // 비밀번호가 입력 되었을때
                 } else {
                     
                     self?.viewmodel.insertTavleViewModelsds(Content: NoteText, Password: self!.passWord)
-                    print("detailview 비밀 번호가 입력 되었을때1")
+                   
                     completabl(.completed)
-                print("detailview 비밀 번호가 입력 되었을때2")
+               
                 }
                 
             })
@@ -158,14 +173,15 @@ class DetailViewController: UIViewController {
             
             // 비밀번호가 없을때
         } else {
+            
             self?.viewmodel.insertTavleViewModelsds(Content: NoteText, Password: self!.passWord)
-            print("detailview 비밀 번호가 없을때 인서트1")
+           
             completabl(.completed)
-            print("detailview 비밀 번호가 입력 되었을때")
+        
         }
         
         return Disposables.create {
-            print("detailview Disposables.create")
+
             self?.navigationController?.popViewController(animated: true)
             
         }

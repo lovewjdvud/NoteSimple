@@ -8,11 +8,16 @@
 import UIKit
 import RxSwift
 
-class TableViewCell: UITableViewCell ,passWordcell{
+
+
+class TableViewCell: UITableViewCell {
+
     
-    var protocolpassword: String = ""
+ 
+  //  var protocolpassword: String = ""
     
 
+    @IBOutlet weak var btn_cel: UIButton!
     @IBOutlet weak var lablel_tableviewCell: UILabel!
     
     var disposeBag = DisposeBag()
@@ -26,9 +31,23 @@ class TableViewCell: UITableViewCell ,passWordcell{
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
        
-        
+       
         
     }
+    
+    func updateUI(item: NoteItem)  {
+        
+        if item.Password! != "" {
+            lablel_tableviewCell.frame.size.width = 10
+            btn_cel.isHidden = false
+        } else {
+            btn_cel.isHidden = true
+        }
+        
+        lablel_tableviewCell.text = item.Content!
+        
+    }
+    
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -36,6 +55,9 @@ class TableViewCell: UITableViewCell ,passWordcell{
         
         
     }
+    
+    
+    
   
 
 }

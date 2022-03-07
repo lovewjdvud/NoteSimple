@@ -49,6 +49,59 @@ class SqliteClass {
     }
 
     
+    func UpdateSqlite (Id:String,Content:String,Password:String, Updatedate:String) {
+        
+        let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("NoteSimpe2.sqlite")
+   
+        if sqlite3_open(fileURL.path, &db) != SQLITE_OK{
+            print("error opening database")
+        }
+        
+          var stmt: OpaquePointer?
+          let SQLITE_TRANSIENT = unsafeBitCast(-1, to: sqlite3_destructor_type.self)   //잊지말기
+          let queryString = "UPDATE NoteSimpe SET nContent = ?, nPassword = ?, nDate = ?  WHERE nId = ?"
+        
+          // != SQLITE_OK 가 아니면 {  } 실행
+                 if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
+                     let errmsg = String(cString: sqlite3_errmsg(db)!)
+                     print("error preparing insert : \(errmsg)")
+                     return    // return 할께 없는게 이게 있으면? 그냥 함수를 빠져나가는 것이다!
+                 }
+
+                 // 2번째 VALUES(?) 처리
+                 if sqlite3_bind_text(stmt, 1, Content, -1, SQLITE_TRANSIENT) != SQLITE_OK{
+                     let errmsg = String(cString: sqlite3_errmsg(db)!)
+                     print("error binding dept : \(errmsg)")
+                     return
+                 }
+        
+                 // 4번째 VALUES(?) 처리
+                 if sqlite3_bind_text(stmt, 2, Password, -1, SQLITE_TRANSIENT) != SQLITE_OK{
+                     let errmsg = String(cString: sqlite3_errmsg(db)!)
+                     print("error binding id : \(errmsg)")
+                     return
+                 }
+                // 5번째 VALUES(?) 처리
+                if sqlite3_bind_text(stmt, 3, Updatedate, -1, SQLITE_TRANSIENT) != SQLITE_OK{
+                    let errmsg = String(cString: sqlite3_errmsg(db)!)
+                    print("error binding id : \(errmsg)")
+                    return
+                }
+        
+                if sqlite3_bind_text(stmt, 4, Id, -1, SQLITE_TRANSIENT) != SQLITE_OK{
+                   let errmsg = String(cString: sqlite3_errmsg(db)!)
+                   print("error binding name : \(errmsg)")
+                   return
+               }
+                 
+                 // 실행시키기
+                if sqlite3_step(stmt) != SQLITE_DONE{
+                     let errmsg = String(cString: sqlite3_errmsg(db)!)
+                     print("failure inserting student : \(errmsg)")
+                     return
+                 }
+    }
+    
     
     func InsetSqlite ( Content:String,Password:String, insertdate:String) {
        
@@ -134,6 +187,7 @@ class SqliteClass {
                
              //let noteite =  NoteItem.fromMenuItems(Content: Content, Id: id, Password: Password, Date: SelectDate)
                noteitem.append(NoteItem(Content: Content, Id: id, Password: Password, Date: SelectDate))
+            
     }
         onComplete(.success(noteitem))
 
