@@ -8,10 +8,10 @@
 import Foundation
 
 struct Note : Decodable {
-    var Content : String
-    var Id: Int
-    var Password: String
-    var Date: String
+    var Content : String?
+    var Id: Int?
+    var Password: String?
+    var Date: String?
     
 }
 

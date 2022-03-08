@@ -31,12 +31,13 @@ class TableViewMdoel {
         
         _ = Sqllite.fetchAllMenus()
             .observe(on: ConcurrentDispatchQueueScheduler.init(qos: .default))
-            .map{ menusItem -> [NoteItem] in
-                return menusItem
+            .map{ menusItem in
+                return menusItem!
             }
             .take(1)
             .subscribe(onNext: { self.TableViewObservable.onNext($0)})
           
+        
     }
     
     
@@ -54,11 +55,16 @@ class TableViewMdoel {
         
         Sqllite.UpdateSqlite(Id: id, Content: Content, Password: Password, Updatedate: updatedate)
 }
-    func deleteTavleViewModelsds(Content:String, Password:String)  {
+    func deleteTavleViewModelsds(Id:String)  {
         
         
-        Sqllite.InsetSqlite(Content: Content, Password: Password, insertdate: "2022-2-21")
+        Sqllite.DeleteSqlite(Id: Id)
 }
+    func SelectChangeupdateTavleViewModelsds(Id_1:String,id_2:String)  {
+        
+        Sqllite.SelectChangeUpdateSqlite(Id_1: Id_1, Id_2: id_2)
+    
+    }
     
 }
         

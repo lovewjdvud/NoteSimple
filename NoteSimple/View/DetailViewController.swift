@@ -131,7 +131,7 @@ class DetailViewController: UIViewController {
      
         return  Completable.create { [weak self] completabl in
             
-            guard NoteText != ""  else { return completabl(.completed) as! Disposable}
+            guard NoteText != ""  else { return print("에러") as! Disposable}
             
             print("detailview if문 들어가기전 \(self!.lockornot)")
             
@@ -155,7 +155,13 @@ class DetailViewController: UIViewController {
                     // 비밀번호가 입력 되었을때
                 } else {
                     
-                    self?.viewmodel.insertTavleViewModelsds(Content: NoteText, Password: self!.passWord)
+                    if self!.detailorno {
+                        self?.viewmodel.updateTavleViewModelsds(Content: NoteText, Password: self!.passWord, id: "\(String(describing: self!.selectNote.Id!))", updatedate: "")
+                    } else{
+                        self?.viewmodel.insertTavleViewModelsds(Content: NoteText, Password: self!.passWord)
+                    }
+                    
+                   
                    
                     completabl(.completed)
                
@@ -173,9 +179,11 @@ class DetailViewController: UIViewController {
             
             // 비밀번호가 없을때
         } else {
-            
+            if self!.detailorno {
+                self?.viewmodel.updateTavleViewModelsds(Content: NoteText, Password: self!.passWord, id: "\(String(describing: self!.selectNote.Id!))", updatedate: "")
+            } else{
             self?.viewmodel.insertTavleViewModelsds(Content: NoteText, Password: self!.passWord)
-           
+            }
             completabl(.completed)
         
         }

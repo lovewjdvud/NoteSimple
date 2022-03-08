@@ -100,21 +100,37 @@ class ViewController: UIViewController {
         
         TableViewModel.TableViewObservable
             .observe(on: MainScheduler.instance)
-            .filter { !$0.isEmpty }
+          //  .filter { !$0.isEmpty }
             .bind(to: TableView.rx.items(cellIdentifier: CellId ,cellType:
                 TableViewCell.self)) { index, item, cell in
+                
+                
                 cell.updateUI(item: item)
+                
                 
             }
             .disposed(by: disposbag)
         
-        // 삭제
-        Observable
-            .zip(TableView.rx.itemDeleted, TableView.rx.modelDeleted(NoteItem.self))
-            .map { "셀 선택 \($0),\n\($1)" }
-            .subscribe (onNext : { index in
-              
-            })
+//        // 삭제
+//        Observable
+//            .zip(TableView.rx.itemDeleted, TableView.rx.modelDeleted(NoteItem.self))
+//            .map { "셀 선택 \($0),\n\($1)" }
+//            .subscribe (onNext : { index in
+//
+//            })
+//            .disposed(by: disposbag)
+        TableView.rx.modelDeleted(NoteItem.self)
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] noteit in
+                
+                self?.TableViewModel.deleteTavleViewModelsds(Id: "\(noteit.Id!)")
+
+                self?.TableViewModel.loadData()
+                
+                print("wjdvid \(noteit.Id!)")
+            }
+            )
+            
             .disposed(by: disposbag)
         
         
