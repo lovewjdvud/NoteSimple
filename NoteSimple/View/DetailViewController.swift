@@ -120,6 +120,7 @@ class DetailViewController: UIViewController {
                 }
                 
             })
+            .disposed(by: disposeBag)
         
         lockOffButton.rx.tap
                 .subscribe(onNext:{ _ in

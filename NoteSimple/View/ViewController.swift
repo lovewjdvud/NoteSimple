@@ -121,6 +121,7 @@ class ViewController: UIViewController {
     
     // 시작시 셋팅 뷰
     func seting()  {
+        
         // 테이블뷰
         TableViewModel.TableViewObservable
             .observe(on: MainScheduler.instance)

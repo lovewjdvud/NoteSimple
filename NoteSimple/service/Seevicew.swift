@@ -178,7 +178,7 @@ class SqliteClass {
     
     func SelectChangeUpdateSqlite (allnoteitem: [NoteItem]) {
         
-        var idarray : [String] = []
+      
         
       
         
