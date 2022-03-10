@@ -38,23 +38,26 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8os-TG-hSm">
-                                                    <rect key="frame" x="339" y="11" width="38" height="48"/>
+                                                    <rect key="frame" x="339" y="0.0" width="38" height="59"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="59" id="i0I-7g-JF5"/>
+                                                        <constraint firstAttribute="width" constant="38" id="vFm-9P-RoB"/>
+                                                    </constraints>
                                                     <color key="tintColor" systemColor="systemGreenColor"/>
                                                     <state key="normal" image="lock" catalog="system">
                                                         <color key="titleColor" systemColor="systemGreenColor"/>
                                                         <color key="titleShadowColor" systemColor="systemGreenColor"/>
-                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="19" scale="default"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="28" scale="default"/>
                                                     </state>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="8os-TG-hSm" secondAttribute="trailing" constant="37" id="2ZA-Uq-bBj"/>
-                                                <constraint firstItem="8os-TG-hSm" firstAttribute="top" secondItem="ZRf-JC-vHg" secondAttribute="top" constant="11" id="44X-mc-lJG"/>
                                                 <constraint firstItem="z85-gV-sAr" firstAttribute="leading" secondItem="ZRf-JC-vHg" secondAttribute="leading" constant="5" id="C9l-ae-QkP"/>
                                                 <constraint firstAttribute="bottom" secondItem="z85-gV-sAr" secondAttribute="bottom" constant="-1.5" id="CBw-GY-5Ar"/>
-                                                <constraint firstAttribute="bottom" secondItem="8os-TG-hSm" secondAttribute="bottom" constant="-2" id="LZe-vC-1Zw"/>
+                                                <constraint firstAttribute="bottom" secondItem="8os-TG-hSm" secondAttribute="bottom" constant="-2" id="GpB-D8-pH6"/>
                                                 <constraint firstItem="z85-gV-sAr" firstAttribute="top" secondItem="ZRf-JC-vHg" secondAttribute="top" id="Ls6-hs-hml"/>
-                                                <constraint firstItem="8os-TG-hSm" firstAttribute="leading" secondItem="z85-gV-sAr" secondAttribute="trailing" constant="24" id="hq1-bI-q7Z"/>
+                                                <constraint firstAttribute="trailing" secondItem="8os-TG-hSm" secondAttribute="trailing" constant="37" id="PfV-6P-UQz"/>
+                                                <constraint firstItem="8os-TG-hSm" firstAttribute="top" secondItem="ZRf-JC-vHg" secondAttribute="top" id="m8W-SA-Tq6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
