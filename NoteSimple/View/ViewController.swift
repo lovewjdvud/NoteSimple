@@ -8,8 +8,10 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxGesture
 import RxViewController
 import JJFloatingActionButton
+import Lottie
 
 
 
@@ -17,15 +19,18 @@ class ViewController: UIViewController {
  
 
    
-  
 
     let actionButton = JJFloatingActionButton()
 
     let TableViewModel = TableViewMdoel()       // 테이블뷰 viewmpdel
+    
     var disposbag = DisposeBag()
     let CellId = "TableViewCell" //TableViewCell
     var noteitem : NoteItem?
-    lazy var TableViewObservables = BehaviorRelay<[NoteItem]>(value: [])
+    var noteitemss : [NoteItem]? = []
+
+    
+    
     
     lazy var edictButton = UIBarButtonItem(title: "편집", style: .plain, target: self, action: nil)
     lazy var edictCompletedButton = UIBarButtonItem(title: "완료", style: .plain, target: self, action: nil)
@@ -41,7 +46,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
           
  
-        
+        introscren()
     
         AddButton()
         seting()
@@ -56,19 +61,36 @@ class ViewController: UIViewController {
      
     }
     
-//
-//    override func setEditing (_ editing:Bool, animated:Bool)
-//    {
-//       super.setEditing(editing,animated:animated)
-//        if(self.isEditing)
-//       {
-//            self.editButtonItem.title = "완료"
-//       }else
-//       {
-//        self.editButtonItem.title = "편집"
-//       }
-//     }
-//
+    func introscren()  {
+        
+        TableView.isHidden  = true
+        actionButton.isHidden = true
+        navigationController?.isNavigationBarHidden = true
+
+
+
+      
+        let animationView2 : AnimationView = {
+        let animView = AnimationView(name: "lf30_editor_9qce0ujc")
+        animView.frame = CGRect(x: 0, y: 0, width: 350, height: 500)
+            animView.contentMode = .scaleToFill
+       return animView
+        }()
+        
+        view.addSubview(animationView2)
+        animationView2.center = view.center
+        
+        // 애니매이션 끝나면 메인 등장
+        animationView2.play{ (finish) in
+            // 애니매이션 삭제
+            animationView2.removeFromSuperview()
+            self.TableView.isHidden  = false
+            self.actionButton.isHidden = false
+            self.navigationController?.isNavigationBarHidden = false
+            
+        }
+    }
+    
     func AddButton()  {
 
         self.navigationItem.leftBarButtonItem = editButtonItem
@@ -93,70 +115,101 @@ class ViewController: UIViewController {
     
         
     }
+    func cellColor(itemcolor: String)  {
+   
+    }
     
     // 시작시 셋팅 뷰
     func seting()  {
-
-        
+        // 테이블뷰
         TableViewModel.TableViewObservable
             .observe(on: MainScheduler.instance)
-          //  .filter { !$0.isEmpty }
             .bind(to: TableView.rx.items(cellIdentifier: CellId ,cellType:
                 TableViewCell.self)) { index, item, cell in
-                
-                
+                 
                 cell.updateUI(item: item)
-                
-                
+                self.cellColor(itemcolor: item.Color!)
+                print("index = \(index) item = \(item)")
             }
             .disposed(by: disposbag)
         
-//        // 삭제
-//        Observable
-//            .zip(TableView.rx.itemDeleted, TableView.rx.modelDeleted(NoteItem.self))
-//            .map { "셀 선택 \($0),\n\($1)" }
-//            .subscribe (onNext : { index in
-//
-//            })
-//            .disposed(by: disposbag)
+        // 삭제
         TableView.rx.modelDeleted(NoteItem.self)
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] noteit in
-                
                 self?.TableViewModel.deleteTavleViewModelsds(Id: "\(noteit.Id!)")
-
                 self?.TableViewModel.loadData()
-                
-                print("wjdvid \(noteit.Id!)")
             }
             )
-            
             .disposed(by: disposbag)
-        
-        
+            
         //선택이동
         TableView.rx.itemMoved
-            .map { "아이템 이동 \n= \($0)" }
-            .subscribe (onNext : { index in
-                print("\(index) 최종 itemMoved")
+            .subscribe (onNext : { [self] index in
+                
+                var noteitem =  TableViewModel.noteitem
+                var items =  TableViewModel.TableViewObservable.value
+                let item = items.remove(at: index.sourceIndex.row)
+                           items.insert(item, at: index.destinationIndex.row)
+                noteitem = items
+                
+                TableViewModel.TableViewObservable.accept(items)
+                TableViewModel.alldeleteTavleViewModelsds()
+                TableViewModel.SelectChangeupdateTavleViewModelsds(noteitem: noteitem)
+           
             })
             .disposed(by: disposbag)
+
+        // 제스처
+        TableView.rx
+            .anyGesture(.swipe(direction: .right))
+            .when(.recognized)
+            .subscribe(onNext: {[weak self] gesture in
+               // let tapLocation = recognizer.locationInView(self.tableView)
+                let tapLocation = gesture.location(in: self?.TableView)
+                let tapIndexPath = self?.TableView.indexPathForRow(at: tapLocation)
+      
+                let noteitem =  self?.TableViewModel.noteitem[(tapIndexPath?[1])!]
+                let itemid = noteitem?.Id!
+                let itemColor = Int(noteitem!.Color!)
+                
+                let itemColorcount = self!.itemchang(colorCount: itemColor!)
+                self?.TableViewModel.updateTavleViewModelsds(Content: (noteitem?.Content!)!, Password: (noteitem?.Password!)!, id: "\(itemid!)", updatedate: (noteitem?.Date)!, color:("\(String(describing: itemColorcount))"))
+                                self?.TableViewModel.loadData()
+            }
+            )
+            .disposed(by: disposbag)
         
+        
+        
+        // edit버튼
         editButtonItem.rx.tap
-            .subscribe(onNext: { [weak self] in
+            .subscribe(onNext: { [weak self] _ in
+            
                 self?.toggleEditMode()
+                self?.TableViewModel.loadData()
+            
             })
             .disposed(by: disposbag)
         
+        // 선택 시
         TableView.rx.modelSelected(NoteItem.self)
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] member in
-              
-               
                 self?.presentDetail(of: member)
-                
             })
             .disposed(by: disposbag)
+    }
+    
+    func itemchang(colorCount: Int) -> Int {
+        var color = colorCount + 1
+        
+    
+        if color == 4 {
+            color = 0
+            return color
+        }
+        return color
     }
     
     private func presentDetail(of member: NoteItem) {
@@ -167,11 +220,7 @@ class ViewController: UIViewController {
         if member.Password == "" {
             self.navigationController?.pushViewController(pushVC, animated: true)
         } else{
-            
             alert(of: member)
-            
-            
-            
         }
     }
     
@@ -220,9 +269,14 @@ class ViewController: UIViewController {
 
     private func toggleEditMode() {
         let toggleEditMode = !TableView.isEditing
+        
         TableView.setEditing(toggleEditMode, animated: true)
     }
 
     
 }
 
+
+class wjdvud : UIView {
+    
+}

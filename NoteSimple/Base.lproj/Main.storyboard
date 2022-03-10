@@ -59,6 +59,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="btn_cel" destination="8os-TG-hSm" id="N7T-be-ana"/>
+                                            <outlet property="content_View" destination="ZRf-JC-vHg" id="ECE-5N-YBL"/>
                                             <outlet property="lablel_tableviewCell" destination="z85-gV-sAr" id="caT-oT-Sxn"/>
                                         </connections>
                                     </tableViewCell>

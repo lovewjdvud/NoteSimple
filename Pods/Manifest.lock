@@ -1,8 +1,12 @@
 PODS:
   - JJFloatingActionButton (2.5.0)
+  - lottie-ios (3.3.0)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
+  - RxGesture (4.0.3):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - RxRelay (6.5.0):
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
@@ -12,25 +16,31 @@ PODS:
 
 DEPENDENCIES:
   - JJFloatingActionButton
+  - lottie-ios
   - RxCocoa
+  - RxGesture
   - RxSwift
   - RxViewController
 
 SPEC REPOS:
   trunk:
     - JJFloatingActionButton
+    - lottie-ios
     - RxCocoa
+    - RxGesture
     - RxRelay
     - RxSwift
     - RxViewController
 
 SPEC CHECKSUMS:
   JJFloatingActionButton: fdc3aefb0f28f04d0f988fa25d5fac97028a9ea7
+  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxGesture: abadd243fc36db74df43dfc893829ddde94f1a3d
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   RxViewController: 56486fa0afd629a1d6b5ba077f3b8cd9dc31b5d2
 
-PODFILE CHECKSUM: ded57922d3b898735781700c32f3c915ab7f9237
+PODFILE CHECKSUM: 7091304da8059072ee2d0de07f07f1b65a81470c
 
 COCOAPODS: 1.11.2

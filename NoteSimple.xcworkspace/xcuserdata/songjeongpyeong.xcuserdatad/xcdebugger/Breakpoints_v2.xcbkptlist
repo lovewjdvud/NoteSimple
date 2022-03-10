@@ -142,8 +142,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "buttonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -158,8 +158,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "lockButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,10 +174,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "202"
-            endingLineNumber = "202"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
             landmarkName = "InsetSqlite(Content:Password:insertdate:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -190,8 +190,8 @@
             filePath = "NoteSimple/ViewModel/TableViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "TableViewMdoel"
             landmarkType = "3">
          </BreakpointContent>
@@ -206,10 +206,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
+            startingLineNumber = "361"
+            endingLineNumber = "361"
             landmarkName = "fetchAllMenus()"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -222,10 +222,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "243"
-            endingLineNumber = "243"
+            startingLineNumber = "312"
+            endingLineNumber = "312"
             landmarkName = "sqlselect(onComplete:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -238,10 +238,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "285"
-            endingLineNumber = "285"
+            startingLineNumber = "353"
+            endingLineNumber = "353"
             landmarkName = "sqlselect(onComplete:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -254,10 +254,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "302"
-            endingLineNumber = "302"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
             landmarkName = "fetchAllMenus()"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -270,10 +270,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
+            startingLineNumber = "368"
+            endingLineNumber = "368"
             landmarkName = "fetchAllMenus()"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -302,10 +302,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "279"
-            endingLineNumber = "279"
+            startingLineNumber = "349"
+            endingLineNumber = "349"
             landmarkName = "sqlselect(onComplete:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -318,10 +318,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "297"
-            endingLineNumber = "297"
+            startingLineNumber = "365"
+            endingLineNumber = "365"
             landmarkName = "fetchAllMenus()"
-            landmarkType = "9">
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "771EF404-2670-4104-85CE-93F20A0F2205 - be77c80c03acfdf8"
@@ -366,10 +366,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "299"
-            endingLineNumber = "299"
+            startingLineNumber = "367"
+            endingLineNumber = "367"
             landmarkName = "fetchAllMenus()"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -382,10 +382,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "303"
-            endingLineNumber = "303"
+            startingLineNumber = "371"
+            endingLineNumber = "371"
             landmarkName = "fetchAllMenus()"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -398,10 +398,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "304"
-            endingLineNumber = "304"
+            startingLineNumber = "372"
+            endingLineNumber = "372"
             landmarkName = "fetchAllMenus()"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -414,10 +414,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "305"
-            endingLineNumber = "305"
+            startingLineNumber = "373"
+            endingLineNumber = "373"
             landmarkName = "fetchAllMenus()"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -430,10 +430,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "298"
-            endingLineNumber = "298"
+            startingLineNumber = "366"
+            endingLineNumber = "366"
             landmarkName = "fetchAllMenus()"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -494,8 +494,8 @@
             filePath = "NoteSimple/View/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "ViewController"
             landmarkType = "3">
             <Locations>
@@ -557,10 +557,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "291"
-            endingLineNumber = "291"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
             landmarkName = "fetchAllMenus()"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -573,10 +573,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "294"
-            endingLineNumber = "294"
+            startingLineNumber = "362"
+            endingLineNumber = "362"
             landmarkName = "fetchAllMenus()"
-            landmarkType = "9">
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "4E21B5C2-8D35-4327-8F2E-345D719F8589 - df38b921ae425d94"
@@ -621,10 +621,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "295"
-            endingLineNumber = "295"
+            startingLineNumber = "363"
+            endingLineNumber = "363"
             landmarkName = "fetchAllMenus()"
-            landmarkType = "9">
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "607B7C87-8F49-47B7-A294-2B2456E34E90 - df38b921ae425d94"
@@ -669,8 +669,8 @@
             filePath = "NoteSimple/View/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -685,58 +685,10 @@
             filePath = "NoteSimple/View/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "seting()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "66A34602-48E2-4E2B-8037-04DCD008E901"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NoteSimple/View/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "seting()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "66A34602-48E2-4E2B-8037-04DCD008E901 - 34be3b9822cc7fd4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NoteSimple.ViewController.seting() -&gt; ()"
-                  moduleName = "NoteSimple"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/songjeongpyeong/Documents/GitHub/NoteSimple/NoteSimple/View/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "94"
-                  endingLineNumber = "94"
-                  offsetFromSymbolStart = "400">
-               </Location>
-               <Location
-                  uuid = "66A34602-48E2-4E2B-8037-04DCD008E901 - 1939e315f192e57d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;NoteSimple.NoteItem&gt;) -&gt; Swift.Bool in NoteSimple.ViewController.seting() -&gt; ()"
-                  moduleName = "NoteSimple"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/songjeongpyeong/Documents/GitHub/NoteSimple/NoteSimple/View/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "94"
-                  endingLineNumber = "94"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -749,8 +701,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "viewWillDisappear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -765,8 +717,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "viewDidDisappear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -781,10 +733,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "245"
-            endingLineNumber = "245"
+            startingLineNumber = "314"
+            endingLineNumber = "314"
             landmarkName = "sqlselect(onComplete:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -797,8 +749,8 @@
             filePath = "NoteSimple/View/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -813,8 +765,8 @@
             filePath = "NoteSimple/View/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -829,8 +781,8 @@
             filePath = "NoteSimple/View/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "seting()"
             landmarkType = "7">
             <Locations>
@@ -877,8 +829,8 @@
             filePath = "NoteSimple/View/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "seting()"
             landmarkType = "7">
          </BreakpointContent>
@@ -893,8 +845,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -909,8 +861,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -925,8 +877,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -941,8 +893,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -957,8 +909,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -973,8 +925,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -989,8 +941,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1005,8 +957,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1021,8 +973,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "Detailsetting()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1037,8 +989,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1053,8 +1005,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
             <Locations>
@@ -1101,8 +1053,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1117,8 +1069,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1133,8 +1085,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1149,8 +1101,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1165,8 +1117,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1181,8 +1133,8 @@
             filePath = "NoteSimple/View/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "seting()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1197,25 +1149,9 @@
             filePath = "NoteSimple/View/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "seting()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1B747FC9-5D2D-429D-9FEC-3FC9EC358E20"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NoteSimple/View/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
-            landmarkName = "toggleEditMode()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1229,8 +1165,8 @@
             filePath = "NoteSimple/View/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
             landmarkName = "seting()"
             landmarkType = "7">
             <Locations>
@@ -1277,8 +1213,8 @@
             filePath = "NoteSimple/View/TableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "awakeFromNib()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1293,8 +1229,8 @@
             filePath = "NoteSimple/View/TableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "prepareForReuse()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1309,8 +1245,8 @@
             filePath = "NoteSimple/View/TableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "setSelected(_:animated:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1325,8 +1261,8 @@
             filePath = "NoteSimple/View/TableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "awakeFromNib()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1341,8 +1277,8 @@
             filePath = "NoteSimple/ViewModel/TableViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "loadData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1357,8 +1293,8 @@
             filePath = "NoteSimple/View/TableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "prepareForReuse()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1373,8 +1309,8 @@
             filePath = "NoteSimple/View/TableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "updateUI(item:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1389,8 +1325,8 @@
             filePath = "NoteSimple/View/TableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "updateUI(item:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1405,8 +1341,8 @@
             filePath = "NoteSimple/View/TableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "updateUI(item:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1421,8 +1357,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "Detailsetting()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1437,8 +1373,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1453,8 +1389,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1469,8 +1405,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1485,9 +1421,9 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "UpdateSqlite(Id:Content:Password:Updatedate:)"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "UpdateSqlite(Id:Content:Password:Updatedate:Color:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1501,8 +1437,8 @@
             filePath = "NoteSimple/View/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "seting()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1517,8 +1453,8 @@
             filePath = "NoteSimple/ViewModel/TableViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "loadData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1533,8 +1469,8 @@
             filePath = "NoteSimple/View/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "seting()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1549,8 +1485,8 @@
             filePath = "NoteSimple/ViewModel/TableViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "loadData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1565,8 +1501,8 @@
             filePath = "NoteSimple/ViewModel/TableViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "loadData()"
             landmarkType = "7">
             <Locations>
@@ -1613,8 +1549,8 @@
             filePath = "NoteSimple/ViewModel/TableViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "loadData()"
             landmarkType = "7">
             <Locations>
@@ -1661,26 +1597,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "276"
-            endingLineNumber = "276"
+            startingLineNumber = "346"
+            endingLineNumber = "346"
             landmarkName = "sqlselect(onComplete:)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "72AB6BC0-ECD7-4CC7-84C1-E95C9CA77BE4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NoteSimple/service/Seevicew.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "273"
-            endingLineNumber = "273"
-            landmarkName = "sqlselect(onComplete:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1693,10 +1613,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
+            startingLineNumber = "325"
+            endingLineNumber = "325"
             landmarkName = "sqlselect(onComplete:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1709,10 +1629,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
+            startingLineNumber = "318"
+            endingLineNumber = "318"
             landmarkName = "sqlselect(onComplete:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1725,10 +1645,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "272"
-            endingLineNumber = "272"
+            startingLineNumber = "343"
+            endingLineNumber = "343"
             landmarkName = "sqlselect(onComplete:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1741,10 +1661,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "277"
-            endingLineNumber = "277"
+            startingLineNumber = "347"
+            endingLineNumber = "347"
             landmarkName = "sqlselect(onComplete:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1757,8 +1677,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1773,8 +1693,8 @@
             filePath = "NoteSimple/View/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
             landmarkName = "funcalert(NoteText:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1789,8 +1709,8 @@
             filePath = "NoteSimple/ViewModel/TableViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "TableViewMdoel"
             landmarkType = "3">
          </BreakpointContent>
@@ -1805,10 +1725,10 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "244"
-            endingLineNumber = "244"
+            startingLineNumber = "313"
+            endingLineNumber = "313"
             landmarkName = "sqlselect(onComplete:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1821,40 +1741,24 @@
             filePath = "NoteSimple/service/Seevicew.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "246"
-            endingLineNumber = "246"
+            startingLineNumber = "315"
+            endingLineNumber = "315"
             landmarkName = "sqlselect(onComplete:)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "46359510-E0ED-45EC-A293-6158814ED279"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NoteSimple/service/Seevicew.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
-            landmarkName = "InsetSqlite(Content:Password:insertdate:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1D3EE9E2-CDC0-4C76-86D2-8AE1115B75D3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NoteSimple/View/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1862,16 +1766,192 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BB1D1CAE-833C-4797-9859-58A27A06A08B"
-            shouldBeEnabled = "Yes"
+            uuid = "77E429EE-1889-44AC-9E56-C1288C5899C5"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NoteSimple/View/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "seting()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4BE0F0A-5916-4BA9-B8E7-BBDC619A7937"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NoteSimple/ViewModel/TableViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "insertTavleViewModelsds(Content:Password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E9D8ED2B-56C0-4F8A-A30B-1C54949F4928"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NoteSimple/ViewModel/TableViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "insertTavleViewModelsds(Content:Password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6CCED773-5FFD-41E3-98D1-03A8AACCD41D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NoteSimple/ViewModel/TableViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "insertTavleViewModelsds(Content:Password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "07894AD1-515E-4515-85FA-E6DBF9B96EBA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NoteSimple/service/Seevicew.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "SqliteClass"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D62C901-4C24-4578-BBAD-0B1A1D6345FD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NoteSimple/View/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "seting()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3D62C901-4C24-4578-BBAD-0B1A1D6345FD - 5d6bedc39f5fbadd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 (__C.UIGestureRecognizer) -&gt; () in NoteSimple.ViewController.seting() -&gt; ()"
+                  moduleName = "NoteSimple"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/songjeongpyeong/Documents/GitHub/NoteSimple/NoteSimple/View/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "1244">
+               </Location>
+               <Location
+                  uuid = "3D62C901-4C24-4578-BBAD-0B1A1D6345FD - 5d6bedc39f5fbadd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 (__C.UIGestureRecognizer) -&gt; () in NoteSimple.ViewController.seting() -&gt; ()"
+                  moduleName = "NoteSimple"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/songjeongpyeong/Documents/GitHub/NoteSimple/NoteSimple/View/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "1564">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A3501D19-3E97-4551-BF76-55A394EB5330"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NoteSimple/View/TableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "updateUI(item:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B1FCEB95-303A-4FD4-A233-DC878EE06FDB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NoteSimple/View/TableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "updateUI(item:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B95D4826-C455-48B5-8F7C-C80A8BA0D7F3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NoteSimple/View/TableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "cellColor(itemcolor:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "66312557-E555-4D0D-A5FE-3C5A549BEF21"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NoteSimple/View/TableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "cellColor(itemcolor:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

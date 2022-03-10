@@ -10,4 +10,6 @@ target 'NoteSimple' do
   pod 'RxCocoa'
   pod 'RxViewController'
   pod 'JJFloatingActionButton'
+  pod 'RxGesture'
+  pod 'lottie-ios'
 end

@@ -21,6 +21,7 @@
 		6943B33527B7B3D90000A310 /* Seevicew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6943B33427B7B3D90000A310 /* Seevicew.swift */; };
 		6943B33727B7B8F30000A310 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6943B33627B7B8F30000A310 /* libsqlite3.0.tbd */; };
 		69D6FE9B27BA361A006058AD /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D6FE9A27BA361A006058AD /* Note.swift */; };
+		69E9EE0527D99CE100286631 /* lf30_editor_9qce0ujc.json in Resources */ = {isa = PBXBuildFile; fileRef = 69E9EE0427D99CE100286631 /* lf30_editor_9qce0ujc.json */; };
 		8C9996FC0764B4991909B352 /* Pods_NoteSimple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219441293E46342203AFF37B /* Pods_NoteSimple.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		6943B33427B7B3D90000A310 /* Seevicew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seevicew.swift; sourceTree = "<group>"; };
 		6943B33627B7B8F30000A310 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		69D6FE9A27BA361A006058AD /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		69E9EE0427D99CE100286631 /* lf30_editor_9qce0ujc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = lf30_editor_9qce0ujc.json; path = ../../../../Downloads/lf30_editor_9qce0ujc.json; sourceTree = "<group>"; };
 		CB54C25ACFB75AA62D2E5CA3 /* Pods-NoteSimple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSimple.debug.xcconfig"; path = "Target Support Files/Pods-NoteSimple/Pods-NoteSimple.debug.xcconfig"; sourceTree = "<group>"; };
 		D3040BCCEC85148E6D5412FB /* Pods-NoteSimple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSimple.release.xcconfig"; path = "Target Support Files/Pods-NoteSimple/Pods-NoteSimple.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 				69049F7A27B6168400F8F466 /* Main.storyboard */,
 				69049F7D27B6168500F8F466 /* Assets.xcassets */,
 				69049F7F27B6168500F8F466 /* LaunchScreen.storyboard */,
+				69E9EE0427D99CE100286631 /* lf30_editor_9qce0ujc.json */,
 				69049F8227B6168500F8F466 /* Info.plist */,
 			);
 			path = NoteSimple;
@@ -226,6 +229,7 @@
 				69049F8127B6168500F8F466 /* LaunchScreen.storyboard in Resources */,
 				69049F7E27B6168500F8F466 /* Assets.xcassets in Resources */,
 				69049F7C27B6168400F8F466 /* Main.storyboard in Resources */,
+				69E9EE0527D99CE100286631 /* lf30_editor_9qce0ujc.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

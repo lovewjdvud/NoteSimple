@@ -23,7 +23,7 @@ class DetailViewController: UIViewController {
     var detailviewmodel = DetailViewMdoel()
     var viewmodel = TableViewMdoel()
     var disposeBag = DisposeBag()
-   
+    var ToShareContent = [String]()
     
     var lockornot = false
     var detailorno = false
@@ -35,6 +35,12 @@ class DetailViewController: UIViewController {
     
    lazy var aboutButton = UIBarButtonItem(title: "저장", style: .plain, target: self, action: nil)
   
+    lazy var shareButton : UIBarButtonItem = {
+        let button =  UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(lockButton(_:)))
+        button.tag = 0
+        return button
+    }()
+    
     lazy var lockOffButton : UIBarButtonItem = { 
         let button =  UIBarButtonItem(image: UIImage(systemName: "lock.open"), style: .plain, target: self, action: #selector(lockButton(_:)))
         button.tag = 0
@@ -50,8 +56,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("selectNote = \(String(describing: selectNote.Content!))")
-        print("textview_detail = \(detailorno)")
+      
         
         Detailsetting()
      
@@ -61,7 +66,7 @@ class DetailViewController: UIViewController {
       
         self.passWord = ""
         
-
+        ToShareContent.removeAll()
         
         self.detailorno = false
         
@@ -85,27 +90,62 @@ class DetailViewController: UIViewController {
     func Detailsetting()  {
         
         
+        
         if detailorno {
+            
+            
             textview_detail.text = selectNote.Content!
-        }
+            navigationItem.rightBarButtonItems = [aboutButton, lockOffButton,shareButton]
+            ToShareContent.append(textview_detail.text)
+        } else{
     
         navigationItem.rightBarButtonItems = [aboutButton, lockOffButton]
-        lockOffButton.tintColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
-        aboutButton.tintColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+      
+        }
         
-     
+        lockOffButton.tintColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        lockOnButton.tintColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        aboutButton.tintColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        shareButton.tintColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        
+        
+        shareButton.rx.tap
+            .subscribe(onNext:{ _ in
+                if self.detailorno {
+                    
+                    let activityVC = UIActivityViewController(activityItems: self.ToShareContent, applicationActivities: nil)
+                            activityVC.popoverPresentationController?.sourceView = self.view
+                    self.present(activityVC, animated: true, completion: nil)
+                    
+                }
+                
+            })
         
         lockOffButton.rx.tap
                 .subscribe(onNext:{ _ in
-                    self.navigationItem.rightBarButtonItems = [self.aboutButton, self.lockOnButton]
+                    
+                    if self.detailorno {
+                        self.navigationItem.rightBarButtonItems = [self.aboutButton, self.lockOnButton, self.shareButton]
+                    }else{
+                        self.navigationItem.rightBarButtonItems = [self.aboutButton, self.lockOnButton]
+                    }
+                   
                     self.lockornot = true
+                    
                 })
                 .disposed(by: disposeBag)
         
         
         lockOnButton.rx.tap
                 .subscribe(onNext:{ _ in
-                    self.navigationItem.rightBarButtonItems = [self.aboutButton, self.lockOffButton]
+                    
+                    if self.detailorno {
+                        
+                        self.navigationItem.rightBarButtonItems = [self.aboutButton, self.lockOffButton, self.shareButton]
+                    }else{
+                        self.navigationItem.rightBarButtonItems = [self.aboutButton, self.lockOffButton]
+                    }
+                  
                     self.lockornot = false
                 })
                 .disposed(by: disposeBag)
@@ -131,9 +171,9 @@ class DetailViewController: UIViewController {
      
         return  Completable.create { [weak self] completabl in
             
-            guard NoteText != ""  else { return print("에러") as! Disposable}
+            //guard NoteText != ""  else { return print("에러") as! Disposable}
             
-            print("detailview if문 들어가기전 \(self!.lockornot)")
+          
             
         // 비밀번호가 있을 때
         if self!.lockornot {
@@ -156,7 +196,7 @@ class DetailViewController: UIViewController {
                 } else {
                     
                     if self!.detailorno {
-                        self?.viewmodel.updateTavleViewModelsds(Content: NoteText, Password: self!.passWord, id: "\(String(describing: self!.selectNote.Id!))", updatedate: "")
+                        self?.viewmodel.updateTavleViewModelsds(Content: NoteText, Password: self!.passWord, id: "\(String(describing: self!.selectNote.Id!))", updatedate: "", color: self!.selectNote.Color!)
                     } else{
                         self?.viewmodel.insertTavleViewModelsds(Content: NoteText, Password: self!.passWord)
                     }
@@ -180,7 +220,7 @@ class DetailViewController: UIViewController {
             // 비밀번호가 없을때
         } else {
             if self!.detailorno {
-                self?.viewmodel.updateTavleViewModelsds(Content: NoteText, Password: self!.passWord, id: "\(String(describing: self!.selectNote.Id!))", updatedate: "")
+                self?.viewmodel.updateTavleViewModelsds(Content: NoteText, Password: self!.passWord, id: "\(String(describing: self!.selectNote.Id!))", updatedate: "", color: self!.selectNote.Color!)
             } else{
             self?.viewmodel.insertTavleViewModelsds(Content: NoteText, Password: self!.passWord)
             }

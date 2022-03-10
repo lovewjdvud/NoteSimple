@@ -14,8 +14,9 @@ import RxCocoa
 class TableViewMdoel {
     
     
-   lazy var TableViewObservable = BehaviorSubject<[NoteItem]>(value: [])
-    
+   lazy var TableViewObservable = BehaviorRelay<[NoteItem]>(value: [])
+    var noteitem: [NoteItem] = []
+    var noteitemcount : Int?
    var Sqllite = SqliteClass()
    
   //  var noteitem: [NoteItem] = []
@@ -24,6 +25,7 @@ class TableViewMdoel {
     init() {
     
         loadData()
+        
     }
     
     
@@ -31,11 +33,13 @@ class TableViewMdoel {
         
         _ = Sqllite.fetchAllMenus()
             .observe(on: ConcurrentDispatchQueueScheduler.init(qos: .default))
-            .map{ menusItem in
-                return menusItem!
+            .map{ [weak self] menusItem in
+                self?.noteitem = menusItem
+                return menusItem
+                
             }
             .take(1)
-            .subscribe(onNext: { self.TableViewObservable.onNext($0)})
+            .subscribe(onNext: { self.TableViewObservable.accept($0)})
           
         
     }
@@ -44,27 +48,33 @@ class TableViewMdoel {
     
     
     func insertTavleViewModelsds(Content:String, Password:String)  {
-        
+   
+
         
         Sqllite.InsetSqlite(Content: Content, Password: Password, insertdate: "2022-2-21")
 }
         
     
-    func updateTavleViewModelsds(Content:String, Password:String,id: String,updatedate: String)  {
+    func updateTavleViewModelsds(Content:String, Password:String, id: String, updatedate: String, color: String)  {
         
+        Sqllite.UpdateSqlite(Id: id, Content: Content, Password: Password, Updatedate: updatedate, Color: color)
         
-        Sqllite.UpdateSqlite(Id: id, Content: Content, Password: Password, Updatedate: updatedate)
 }
     func deleteTavleViewModelsds(Id:String)  {
         
         
         Sqllite.DeleteSqlite(Id: Id)
 }
-    func SelectChangeupdateTavleViewModelsds(Id_1:String,id_2:String)  {
+    func SelectChangeupdateTavleViewModelsds(noteitem: [NoteItem])  {
         
-        Sqllite.SelectChangeUpdateSqlite(Id_1: Id_1, Id_2: id_2)
+        Sqllite.SelectChangeUpdateSqlite(allnoteitem: noteitem)
     
     }
+    func alldeleteTavleViewModelsds()  {
+        
+        
+        Sqllite.allDeleteSqlite()
+}
     
 }
         
